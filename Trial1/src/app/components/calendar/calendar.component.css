@@ -1,0 +1,14 @@
+.calendarWidth{
+    width: 300px;
+    margin-top: 20px;
+    border: 2px solid rgb(231, 228, 228);
+}
+
+.example-custom-date-class {
+    background: orange;
+    border-radius: 100%;
+  }
+  
+  .highlight-date{
+    background-color: red;
+  }

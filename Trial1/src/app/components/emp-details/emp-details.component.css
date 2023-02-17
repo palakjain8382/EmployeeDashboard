@@ -1,0 +1,41 @@
+.container{
+  margin-top: 30px;
+}
+
+.card-block{
+    padding: 20px;
+    border: none;
+  }
+  
+  .card-title{
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  .empImage{
+    width: 130px;
+    height: 130px;
+    border: 5px solid black;
+  }
+
+.empCardRight{
+  float: right;
+  margin-right: 30px;
+}
+
+.empName{
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.empName, .designation{
+  width: 130px;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+.editBtn{
+  float: right;
+  border: none;
+  background-color: transparent;
+}
