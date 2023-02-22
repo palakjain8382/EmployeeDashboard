@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand navbar-text" href="#">
+        <img [src]="logo" width="200">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link navbar-text " aria-current="page" href="#">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-text" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-text" href="#">Help Channel</a>
+          </li>
+          </ul>
+        </div>
+
+        <!-- <div class="dropdown"> -->
+          <!-- <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false"> -->
+          <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none" aria-expanded="false">
+            <img src="\assets\Images\user.jpg" alt="mdo" width="30" height="30" class="rounded-circle">
+          </a>
+      <!-- <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>     -->
+        <!-- </div> -->
+
+
+        <div id="icons">
+            <a class="navbar-brand" href="#">
+                <img [src]="bellIcon" alt="notifications" width="30">
+            </a>
+            <a class="navbar-brand"  routerLink="" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <img [src]="logoutIcon" (click)="logout()" alt="logout" width="30">
+            </a>
+        </div>
+    </div>
+  </nav>
+
+  <app-work-in class="timer"></app-work-in>
+

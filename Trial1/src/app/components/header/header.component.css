@@ -1,0 +1,18 @@
+.navbar-custom{
+    background-color: #36babc;
+    z-index: 1;
+    width: 100%;
+}
+
+.navbar-text{
+    color: white;
+    margin-left: 20px;
+}
+
+#icons{
+    display: flex;
+}
+
+.timer{
+    float: right;
+}

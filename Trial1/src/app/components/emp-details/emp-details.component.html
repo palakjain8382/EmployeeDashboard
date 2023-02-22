@@ -1,0 +1,69 @@
+<!-- <div class="body"> -->
+    <div class="py-5">
+        <div class="container">
+            <div class="col-md-5">
+              <div class="card shadow">
+                <div class="card-block">
+                  <button class="editBtn" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3597/3597088.png" width="24" height="24">
+                  </button>
+                    <div class="empCardRight">
+                    <img src="assets\Images\user.jpg" class="empImage">
+                    <div class="empName">{{empName}}</div>
+                    <div class="designation">{{empDesignation}}</div>
+                  </div>
+                  <p class="card-title">Employee Id</p>
+                  <p class="card-text p-y-1">{{empID}}</p>
+
+                  <p class="card-title">Location</p>
+                  <p class="card-text p-y-1">{{empLoc}}</p>
+
+                  <p class="card-title">Joining Date</p>
+                  <p class="card-text p-y-1">{{DOJ}}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Edit Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+          <div class="form-group">
+            <label for="empID" class="col-form-label">Employee ID:</label>
+            <input type="text" class="form-control" value="{{ empID }}" name="empID" [(ngModel)]="empID">
+          </div>
+          <div class="form-group">
+            <label for="empName" class="col-form-label">Employee Name:</label>
+            <input type="text" class="form-control" value="{{ empName }}" name="empName" [(ngModel)]="empName">
+          </div>
+          <div class="form-group">
+            <label for="empDesignation" class="col-form-label">Employee Deisgnation:</label>
+            <input type="text" class="form-control" value="{{ empDesignation }}" name="empDesignation" [(ngModel)]="empDesignation">
+          </div>
+          <label for="empLocation" class="col-form-label">Employee Location:</label>
+          <!-- <select class="form-select" aria-label="Default select example" name="empLoc">
+            <option value="Cannon Tower" selected>Cannon Tower</option>
+            <option value="Panchkula">Panchkula</option>
+            <option value="Bangalore">Bangalore</option>
+          </select> -->
+          <select class="form-control" aria-label="Default select example" [ngModel]="selected" [ngModelOptions]="{standalone: true}" (ngModelChange)="selectOption($event)" >
+          <option [value]="item.id" *ngFor="let item of Locations">{{item.name}}</option>
+           </select>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+<!-- </div> -->

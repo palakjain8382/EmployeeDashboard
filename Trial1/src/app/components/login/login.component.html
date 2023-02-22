@@ -1,0 +1,53 @@
+    <div class="body">
+<div class="d-flex justify-content-center customPosition">
+    <div class="card shadow-lg">
+
+        <img  src="/assets/Images/GeminiLogin.svg" alt="" id="logo">
+        
+
+        <form [formGroup]="form" (ngSubmit)="loginUP()">
+            <!-- <p>Please login to continue</p> -->
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="User" formControlName="userName" required>
+              <mat-error *ngIf="isFieldInvalid('userName')">
+                Please inform your user name
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+              <input matInput type="password" placeholder="Password" formControlName="password" required>
+              <mat-error *ngIf="isFieldInvalid('userName')">
+                Please inform your password
+              </mat-error>
+            </mat-form-field>
+            <button mat-raised-button type="submit" class="btn">Login</button>
+          </form>
+
+      <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-shape="rectangular"
+         data-logo_alignment="left">
+
+         <div id="g_id_onload"
+         data-client_id="627823439671-rcguq1mr3qe6ul5bu61pp3idu9qjji27.apps.googleusercontent.com"
+         data-auto_prompt="false"><div *ngIf="!a">{{login()}}</div>
+      </div>
+
+      </div>
+    <!-- <asl-google-signin-button type='standard' 
+            size='large' 
+            data-text="Login with google" 
+            (click)="login()" 
+            data-logo_alignment="left"
+            data-type="standard"
+            data-size="large"
+            >
+    </asl-google-signin-button>  -->
+
+
+    </div>
+</div>
+</div>
+ 

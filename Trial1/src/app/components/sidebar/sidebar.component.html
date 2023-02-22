@@ -1,0 +1,45 @@
+
+<!-- <mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">  -->
+
+       <div class="d-flex flex-column flex-shrink-0 shadow-lg bg-light rounded sidenav" >
+
+    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+      <a [routerLink]="['/home']" class="nav-link py-3 border-bottom" data-toggle="tooltip" data-placement="right" title="Home" routerLinkActive="active" 
+      [routerLinkActiveOptions]={exact:true}>
+        <li class="nav-item" >
+          <img src="/assets/Images/homeIcon.png" width="35px">
+        </li>
+      </a>
+      <a [routerLink]="['/projects']" class="nav-link py-3 border-bottom" data-toggle="tooltip" data-placement="right" title="Notification"
+      routerLink="/products" 
+      routerLinkActive="active">
+        <li>
+            <img src="/assets/Images/projectsIcon.png" width="35px">
+        </li>
+      </a>
+      <a href="#" class="nav-link py-3 border-bottom" data-toggle="tooltip" data-placement="right" title="Employee Directory"
+      routerLink="/products" 
+            routerLinkActive="active">
+        <li>
+            <img src="/assets/Images/empDirectoryIcon.png" width="35px">
+        </li>
+      </a>
+      <a href="#" class="nav-link py-3 border-bottom" data-toggle="tooltip" data-placement="right" title="Calendar"
+      routerLink="/products" 
+            routerLinkActive="active">
+        <li>
+            <img src="/assets/Images/calendarIcon.png" width="34px">
+        </li>
+      </a>
+    </ul>
+  
+  </div>
+<!-- </mat-drawer>
+</mat-drawer-container> -->
+ 
+<!-- <div class="example-sidenav-content">
+  <button type="button" mat-button (click)="drawer.toggle()">
+    Toggle sidenav
+  </button>
+</div> -->
