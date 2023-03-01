@@ -1,0 +1,53 @@
+.card-block{
+  padding: 20px;
+  color: white;
+  border: none;
+}
+
+.card-subtitle, .card-link{
+  color: white;
+}
+
+.card{
+  margin-bottom: 20px;
+}
+
+.card1{
+  background: rgb(56,163,165);
+  background: linear-gradient(270deg, rgba(56,163,165,1) 0%, rgba(38,89,120,1) 100%);
+}
+
+.card2{
+  background: rgb(221,83,165);
+  background: linear-gradient(270deg, rgba(221,83,165,1) 0%, rgba(120,38,80,1) 100%);
+}
+
+.card3{
+  background: rgb(224,108,66);
+  background: linear-gradient(270deg, rgba(224,108,66,1) 0%, rgba(121,29,14,1) 100%);
+}
+
+.card-subtitle{
+  margin: 20px 0px 5px 15px;
+}
+
+.timeIcon{
+  width: 70px;
+}
+
+.scoreIcon{
+  width: 70px;
+}
+
+.leaveIcon{
+  width: 100px;
+}
+
+.timeIcon, .leaveIcon, .scoreIcon{
+  float: right;
+  margin-right: 30px;
+}
+
+.eyeIcon{
+  float: right;
+}

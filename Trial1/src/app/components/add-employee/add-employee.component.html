@@ -1,0 +1,90 @@
+<div class="container">
+    <h1>Add Employee</h1>
+  <form #myForm="ngForm" (ngSubmit)="submitForm()">
+        <div class="form-row">
+            <div class="form-group col-md-6" >
+              <label for="empID">Employee ID</label>
+              <input type="text" class="form-control" id="empID"
+              name="empID" [(ngModel)]="addEmployeeRequest.employeeID">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="empName">Employee Name</label>
+              <input type="text" class="form-control" id="empName"
+              name="empName" [(ngModel)]="addEmployeeRequest.name">
+            </div>
+          </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="empDes">Designation</label>
+            <input type="text" class="form-control" id="empDes"
+            name="empDes" [(ngModel)]="addEmployeeRequest.designation">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="phone">Phone</label>
+            <input type="phone" class="form-control" id="phone"
+            name="phone" [(ngModel)]="addEmployeeRequest.phone">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email"
+            name="email" [(ngModel)]="addEmployeeRequest.email">
+          </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Username</label>
+              <input type="username" class="form-control" id="username" placeholder="Username"
+              name="username" [(ngModel)]="addEmployeeRequest.username">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Password</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Password"
+              name="pwd">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="doj">Joining Date</label>
+              <input type="datetime-local" class="form-control" id="doj"
+              name="doj" [(ngModel)]="addEmployeeRequest.joiningDate"> 
+              <!-- (ngModelChange)="addEmployeeRequest.joiningDate = toDate($event)"> -->
+            </div>
+            <div class="form-group col-md-6">
+            <label for="loc">Location</label>
+            <select class="custom-select" id="loc" name="loc" [(ngModel)]="addEmployeeRequest.location" >
+              <option [value]="item" *ngFor="let item of Locations" >{{item}}</option>
+            </select>
+          </div>
+        </div>
+
+
+
+        <div class="form-group">
+          <button class="btn btn-danger btn-block btn-lg" type="submit">Submit</button>
+      </div>
+      </form>
+
+
+
+      <div class="row" style="margin-bottom:15px;">
+        <div class="col-md-3">
+          <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)" >
+          <!-- style="display:none;" name="profile" [(ngModel)]="addEmployeeRequest.profile"> -->
+          <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+        </div>
+        <div class="col-md-4">
+          <span class="upload" *ngIf="progress > 0">
+            {{progress}}%
+          </span>
+          <span class="upload" *ngIf="message">
+            {{message}}
+          </span>
+        </div>
+      </div>
+</div>
